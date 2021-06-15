@@ -1,0 +1,143 @@
+
+
+body {
+    background-color:#23253b;
+}
+
+
+p input {
+    text-align: center;
+    display: inline;
+    margin: auto;
+}
+
+#meme-container {
+    background-color: white;
+}
+
+/* 
+neon text effect adapted from: https://css-tricks.com/how-to-create-neon-text-with-css/
+*/
+h1 {
+    margin-bottom:10%;
+    font-family: "Impact", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 
+    0 0 7px #0fa,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa;
+  }
+
+input[type=text] {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+
+/* 
+neon text adapted from: https://css-tricks.com/how-to-create-neon-text-with-css/
+*/
+.button-glow {
+    text-shadow: 
+    0 0 7px red,
+    0 0 10px #fff,
+    0 0 7px #fff,
+    0 0 21px #fff,
+    0 0 42px red,
+    0 0 82px red;
+}
+
+
+
+/* provide space on left and right of browser window to center memes */
+#meme-container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* 
+set for each meme inside the container
+relative position allows for positioning of text inside the image
+inline-block permits two memes to be appended on one row 
+*/
+#meme-container .meme {
+    width: 45%;
+    position: relative;
+    display: inline-block;
+    margin: 2%;
+    transition: .5s;
+}
+
+
+.meme:hover {
+    opacity: .5;
+}
+
+
+/* 
+set each div to 100% of the meme div width, then center text in the text div to center text in the meme
+font scales to size of meme by using the view window to set size
+text shadow creates black outline, or "stroke" on meme text
+*/
+.meme .meme-text {
+    position: absolute;
+    width: 100%;
+    font-size: 4vw;
+    font-family: "Impact", sans-serif;
+    color:white;
+    text-transform: uppercase;
+    z-index: 1;
+    text-align: center;
+    text-shadow: 
+    black 2px 2px,
+    black -2px -2px,
+    black -2px 2px,
+    black 2px -2px,
+    black 0 2px,
+    black 0 -2px;
+}
+
+/* 
+set top and bottom text to their respective positions on the image
+*/
+.top-text {
+    top: 0px;
+}
+
+.bottom-text {
+    bottom: 0px;
+}
+
+
+/* 
+set each image to match the width of the meme div
+add transition effect for the overlay
+*/
+.meme img {
+    width: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+
+#submit-button {
+    font-family: "Impact", sans-serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+    background-color: #494b4b;
+    display: block;
+    border-radius: 20px;
+    font-size: 2em;
+    color: white;
+}
+
+
